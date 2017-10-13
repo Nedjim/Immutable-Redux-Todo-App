@@ -1,6 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
+import TodoList  from './component/TodoList';
 
-const App = () => <h1>Welcome</h1>
+const dummyTodos = [
+    { id: 0, isDone: true,  text: 'make components' },
+    { id: 1, isDone: false, text: 'design actions' },
+    { id: 2, isDone: false, text: 'implement reducer' },
+    { id: 3, isDone: false, text: 'connect components' }
+  ];
 
-render(<App />, document.getElementById('app'));
+render(<TodoList todos={dummyTodos} />, document.getElementById('app'));
