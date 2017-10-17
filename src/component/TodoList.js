@@ -7,9 +7,9 @@ const TodoList = (props) => (
         <input type='text' placeholder='Add todo'/>
         <ul className='todo-list'>
             {
-                props.todos.map( t => (
-                    <li key={t.id} className='todo-item'>
-                        <Todo todo={t}/>
+                props.todos.map(e => (
+                    <li key={e.get('id')} className='todo-item'>
+                        <Todo todo={e}/>
                     </li>
                 ))
             }
